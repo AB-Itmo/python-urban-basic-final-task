@@ -168,3 +168,6 @@ class TestBaseCase(unittest.TestCase):
                     f"Убедитесь, что функция `get_count_house_categories` корректно подсчитывает количество домов "
                     f"в каждой категории."
                 )
+
+if __name__ == "__main__":
+    unittest.main()
