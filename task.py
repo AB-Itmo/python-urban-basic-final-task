@@ -84,7 +84,7 @@ def min_area_residential(houses: list[dict]) -> str:
     :return: Адрес дома с наименьшим средним количеством
         квадратных метров жилой площади на одного жильца.
     """
-    house =  min(houses, key=lambda x: x["area_residential"] / x["population"])
+    house = min(houses, key=lambda x: x["area_residential"] / x["population"])
     return house["house_address"]
 
 
