@@ -84,11 +84,8 @@ def min_area_residential(houses: list[dict]) -> str:
     :return: Адрес дома с наименьшим средним количеством
         квадратных метров жилой площади на одного жильца.
     """
-    list_key_val = [
-        (x["house_address"], x["area_residential"] / x["population"]) for x in houses
-    ]
-    key, val = min(list_key_val, key=lambda x: x[1])
-    return key
+    house =  min(houses, key=lambda x: x["area_residential"] / x["population"])
+    return house["house_address"]
 
 
 if __name__ == "__main__":
